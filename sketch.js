@@ -1,6 +1,6 @@
 let numbers = [];
 let tausch;
-let fr = 120;
+let fr = 20;
 let j = 0;
 zaehler = 0;
 
@@ -34,7 +34,11 @@ function draw() {
   background(200);
   let x = 0;
   for(let i = 0; i < numbers.length; i++){
-    stroke(255, 0, 0)
+    if(i == j){
+      stroke(0, 0, 255)
+    }else{
+      stroke(255, 0, 0)
+    }
     rect(x, 0, 5, numbers[i]);
     x = x + 10;
   }
